@@ -1,0 +1,60 @@
+<!doctype html>
+{{!-- Define HTML language based on site locale and add dark mode class if enabled --}}
+<html lang='{{ @site.locale }}' class='{{#if @custom.enable_dark_mode}} is-darkModeAdminSetting-enabled {{/if}}'>
+
+  <!--
+
+  The Londoner 
+
+  Published with Ghost by Mill Media millmediaco.uk
+  Website design by Jenny Miles jennylmiles.com
+  Ghost theme by VelocityFlow velocityflow.net 
+  Based on the Tripoli theme by aspirethemes.com
+
+  -->
+
+  {{!-- Include head partial containing meta tags, stylesheets, and other head elements --}}
+  {{> structure/head }}
+
+  {{!-- Add body class based on current page context --}}
+  <body class='{{ body_class }}'>
+
+    {{!-- Show Mill Media cover for non-members only --}}
+    {{!#unless @member}}
+    {{#unless true}}
+    {{> millmedia-cover}}
+    {{/unless}}
+    
+    {{!-- Include skip navigation for accessibility --}}
+    {{> skip }}
+
+    {{!-- Include header with navigation and site branding --}}
+    {{> structure/header }}
+
+    {{!-- Main content area where page-specific content is injected --}}
+    <main id='main'>
+      {{{ body }}}
+    </main>
+
+    {{!-- Include footer with site information and additional links --}}
+    {{> structure/footer }}
+
+    {{!-- Include share popup component for social sharing functionality --}}
+    {{> share-popup}}
+
+    {{!-- Load minified JavaScript bundle for site functionality --}}
+    <script src='{{ asset 'js/app.min.js' }}'></script>
+
+    {{!-- Include Ghost-specific footer scripts --}}
+    {{ ghost_foot }}
+
+   {{!-- Outpost Integration --}}
+   {{> integrations/outpost}}
+   {{!> integrations/contextly}}
+
+    {{!-- Load Cove Chat integration scripts for comments and tools --}}
+    <script src="https://cdn.cove.chat/comments.js" data-cove-id="2fe34bc13b807dfe776fc71c04021a33" async></script>
+    <script src="https://cdn.cove.chat/tools.js" data-cove-id="2fe34bc13b807dfe776fc71c04021a33" async></script>
+    
+  </body>
+</html>

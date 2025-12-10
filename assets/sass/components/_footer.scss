@@ -1,0 +1,151 @@
+// ------------------------------------
+// Components > Footer
+// ------------------------------------
+
+.c-footer {
+  position: sticky;
+  top: 100vh;
+  padding: var(--space-64) 0;
+  margin-top: var(--space-64);
+  background-color: var(--color-background-secondary);
+
+  @include mq($from: desktop) {
+    padding: 82px 0 47px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @include mq($from: desktop) {
+      > * {
+        margin-top: 0;
+      }
+    }
+
+    .c-logo__light {
+      order: 1;
+      width: 100%;
+      display: flex;
+      margin-bottom: var(--space-32);
+      justify-content: center;
+      
+      .u-block {
+        margin-left: 0;
+      }
+      
+      @include mq($from: desktop) {
+        width: 50%;
+        justify-content: flex-start;
+      }
+      
+      .c-logo__img {
+        max-height: 58px;
+        width: auto;
+
+        @include mq($from: desktop) {
+          height: 80px;
+          max-height: none;
+        }
+      }
+    }
+
+    .c-social-icons {
+      order: 2;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @include mq($from: desktop) {
+        width: 50%;
+        margin-bottom: var(--space-64);
+        justify-content: flex-end;
+      }
+    }
+
+    .c-footer-nav {
+      order: 3;
+      width: 100%;
+      margin-top: var(--space-32);
+      justify-content: center;
+
+      @include mq($from: desktop) {
+        margin-bottom: var(--space-64);
+      }
+    }
+
+    .c-footer-copy {
+      order: 4;
+      width: 100%;
+      margin-top: var(--space-64);
+
+      @include mq($from: desktop) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.c-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .c-nav__item {
+    @include font($line-height: 4, $weight: normal);
+    font-size: 24px;
+    text-transform: initial;
+    color: var(--color-white);
+  }
+
+  .c-nav__item:not(:first-child)::before {
+    display: none;
+  }
+
+  li:not(:last-child) {
+    margin: 0
+  }
+
+  a {
+    @include link_underline_on_hover();
+  }
+
+  .c-nav__link--current:after {
+    background-color: #000000;
+  }
+}
+
+.c-footer-copy {
+  @include font($scale: 1, $line-height: 2);
+  text-align: center;
+  color: var(--color-white);
+
+  a {
+    @include link_underline();
+  }
+}
+
+// New styles for white text in footer
+.c-footer-text {
+  color: var(--color-white);
+}
+
+.c-footer-link {
+  color: var(--color-white);
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Override existing styles to ensure white text
+.c-footer {
+  .c-footer-nav .c-nav__item,
+  .c-footer-copy {
+    color: var(--color-white);
+  }
+}

@@ -1,0 +1,39 @@
+<hr class='c-topper__divider'>
+
+<h2 class="u-font-family-serif"><span id="cove-count"></span> Comments</h2>
+
+<div class="u-font-family-serif" id="cove"></div>
+
+{{#if @member}}
+
+<p class="u-font-family-serif">
+To add your photo to comments, <a href="https://gravatar.com/" target="_blank" style="text-decoration: none; transition: text-decoration 0.3s; color: var(--ghost-accent-color);" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">click here to create a profile on Gravatar.</a>
+<br>Signed in as {{@member.email}}&nbsp;·&nbsp;<a style="text-decoration: none; transition: text-decoration 0.3s; color: var(--ghost-accent-color);" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" href="javascript:" data-members-signout>Sign out</a><p>
+
+{{else}}
+
+<p class="u-font-family-serif">
+  <strong>How to comment:</strong><br>
+  If you are <i>already a member, </i>
+  <a href="#/portal/signin" style="text-decoration: none; transition: text-decoration 0.3s; color: var(--ghost-accent-color);" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+     click here to sign in 
+  </a> and leave a comment. <br>
+  If you aren't a member, 
+  <a href="#/portal/signup" style="text-decoration: none; transition: text-decoration 0.3s; color: var(--ghost-accent-color);" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+    sign up here 
+  </a> to be able to leave a comment. <br>
+
+To add your photo, <a href="https://gravatar.com/" target="_blank" style="text-decoration: none; transition: text-decoration 0.3s; color: var(--ghost-accent-color);" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">click here to create a profile on Gravatar.</a><br>
+
+{{/if}}
+
+<script>
+const Cove = {
+  contentId: "{{id}}",
+  memberId: "{{@member.uuid}}",
+  memberEmail: "{{@member.email}}",
+  memberName: "{{@member.firstname}}",
+  requirePaid: true,
+  isPaid: {{#if @member.paid}}true{{else}}false{{/if}}
+}
+</script>

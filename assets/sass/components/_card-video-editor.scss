@@ -1,0 +1,9 @@
+// ------------------------------------
+// Components > Card Video / Editor
+// ------------------------------------
+
+.c-content {
+  .kg-video-player * {
+    @include font($scale: 2);
+  }
+}

@@ -1,0 +1,23 @@
+<div class='c-share-popup' id='sharePopup'>
+  <button class='c-share-popup__close' aria-label='Close share popup'>&times;</button>
+  
+  {{#post}}
+  <div class='c-share-popup__content'>
+    <div class='c-share-popup__image'>
+      {{#if feature_image}}
+        <img src="{{img_url feature_image size="s"}}" alt="{{title}}">
+      {{/if}}
+    </div>
+    
+    <div class='c-share-popup__text'>
+      <h2 class='c-share-popup__article-title'>{{title}}</h2>
+      <p class='c-share-popup__excerpt'>{{excerpt}}</p>
+    </div>
+  </div>
+  {{/post}}
+
+  <button class="c-share-popup__share-btn js-webshare-trigger plausible-event-name=sharepopup" data-webshare>
+    Share this article
+  </button>
+</div>
+<div class='c-share-popup__overlay' id='shareOverlay'></div>

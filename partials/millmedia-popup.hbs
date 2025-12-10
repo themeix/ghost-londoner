@@ -1,0 +1,216 @@
+<div id="millmedia-popup" class="millmedia-popup">
+  <div class="millmedia-popup-content">
+    <span class="millmedia-close">&times;</span>
+    <div class="millmedia-logo-container">
+      <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+    </div>
+    <div class="millmedia-cta-text">
+      {{@custom.popup_cta}}
+    </div>
+    <form class="millmedia-subscription-form plausible-event-name=Popup+signup" data-members-form="subscribe">
+      <input class="u-font-family-serif" data-members-name type="text" placeholder="Name" required />
+      <input class="u-font-family-serif" data-members-email type="email" placeholder="e-mail" required />
+      <input data-members-label type="hidden" value="The Londoner pop-up" />
+      <button class="millmedia-btn" type="submit">Subscribe</button>
+      <div style="text-align:center;">Already subscribed? 
+        <a href="/#/portal/signin" style="text-decoration: none; transition: text-decoration 0.3s; color: red;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Sign in on this link!</a>
+      </div>
+      <div class="millmedia-messages">
+        <div class="success">Please check your inbox and click the link to complete signup, Thank You!</div>
+        <div class="error">Sorry, something went wrong. Please try again.</div>
+        <div class="loading">Please hold while we check our collection.</div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .millmedia-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .millmedia-popup.visible {
+    opacity: 1;
+  }
+  .millmedia-popup a {
+    color: var(--color-background-button);
+  }
+  .millmedia-popup-content {
+    background-color: white;
+    margin: 10vh auto;
+    padding: 2.5rem 1.5rem 1.5rem;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 31.3rem;
+    border-radius: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .millmedia-popup.visible .millmedia-popup-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .millmedia-logo-container {
+    text-align: center;
+    margin-bottom: 1.3rem;
+  }
+  .millmedia-logo-container .site-logo {
+    max-width: 70%;
+    height: auto;
+  }
+  .millmedia-cta-text {
+    text-align: left;
+    margin-bottom: 1.3rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: black;
+  }
+  .millmedia-close {
+    color: #aaa;
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .millmedia-close:hover,
+  .millmedia-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .millmedia-subscription-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .millmedia-subscription-form input {
+    margin-bottom: 0.9rem;
+    padding: 0.8rem;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    
+  }
+  .millmedia-btn {
+    background-color: var(--color-background-button);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    margin-bottom: 0.6rem;
+  }
+  .millmedia-btn:hover {
+   background-color: color-mix(in srgb, var(--color-background-button) 90%, black);
+   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+  }
+  .millmedia-messages {
+    min-height: 2.5rem;
+    position: relative;
+    text-align: center;
+  }
+  :where(.loading, .success, .error) {
+    display: none;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+  }
+  .loading .loading, .success .success, .error .error {
+    display: block;
+  }
+  .success {    
+    color: black;    
+  }
+  .error {
+    background-color: #f2dede;
+    color: #a94442;
+  }
+  .loading {
+    color: lightgray;    
+  }
+
+  @media screen and (min-width: 48rem) {
+    .millmedia-popup-content {
+      padding: 2.5rem 2.5rem 1.3rem;
+      width: 80%;
+    }
+    .millmedia-cta-text {
+      font-size: 1.3rem;
+    }
+    .millmedia-subscription-form input,
+    .millmedia-btn {
+      padding: 0.9rem;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    var popup = document.getElementById('millmedia-popup');
+    var close = document.getElementsByClassName('millmedia-close')[0];
+    var hasShown = false;
+
+    function shouldShowPopup() {
+      var lastShown = localStorage.getItem('millmedia_popup_last_shown');
+      if (!lastShown) {
+        return true;
+      }
+      var lastShownDate = new Date(parseInt(lastShown));
+      var currentDate = new Date();
+      return currentDate.getDate() !== lastShownDate.getDate() ||
+             currentDate.getMonth() !== lastShownDate.getMonth() ||
+             currentDate.getFullYear() !== lastShownDate.getFullYear();
+    }
+
+    function showPopup() {
+      if (!hasShown && shouldShowPopup()) {
+        popup.style.display = 'block';
+        // Trigger reflow to ensure transition works
+        popup.offsetHeight;
+        popup.classList.add('visible');
+        hasShown = true;
+        localStorage.setItem('millmedia_popup_last_shown', Date.now().toString());
+      }
+    }
+
+    function hidePopup() {
+      popup.classList.remove('visible');
+      setTimeout(function() {
+        popup.style.display = 'none';
+      }, 300); // Match the transition duration
+    }
+
+    function checkScrollTrigger() {
+      if (window.scrollY > (document.documentElement.scrollHeight * 0.3)) {
+        showPopup();
+      }
+    }
+
+    // Set timer for 1 seconds
+    setTimeout(function() {
+      if (!hasShown) {
+        showPopup();
+      }
+    }, 1000);
+
+    close.onclick = hidePopup;
+
+    window.onclick = function(event) {
+      if (event.target == popup) {
+        hidePopup();
+      }
+    }
+
+    window.addEventListener('scroll', checkScrollTrigger);
+  })();
+</script>

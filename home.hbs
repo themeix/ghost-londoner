@@ -1,0 +1,39 @@
+{{!< default}}
+
+{{#contentFor 'title'}}{{ meta_title }}{{/contentFor}}
+
+{{> hero }}
+
+{{#unless @member}}
+    {{> signup-banner }}
+{{else}}
+    <div style="padding: 30px 0;"></div>
+{{/unless}}
+
+{{> editors-picks }}
+
+{{> whoweare }}
+
+{{> home-tags-sections }}
+
+{{#get 'posts' order="published_at desc" include='tags,authors' limit='4'}}
+  {{#if posts}}
+    <div class='c-section c-section--latest'>
+      <div class='o-grid'>
+        <div class='c-section-heading'>
+          <h2 class='c-section-heading'>{{t 'Latest stories' }}</h2>
+
+          <a href='/the-archive/'>
+            {{t 'See all'}} 
+          </a> 
+        </div>
+      </div>
+
+      <div class='o-grid o-grid--4-columns home-latest'>
+        {{#foreach posts}}
+          {{> card showExcerpt=false }}
+        {{/foreach}}
+      </div>
+    </div>
+  {{/if}}
+{{/get}}

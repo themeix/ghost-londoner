@@ -1,0 +1,52 @@
+<div class="c-writers-section">
+    <div class="o-grid">
+        <div class="o-grid__col o-grid__col--full">
+            <h2  class="c-section-heading">Our Team</h2>
+        </div>
+    </div>
+    <div class="o-grid c-writers-grid">
+        
+        {{#get 'authors' filter='status:active+visibility:public+slug:[{{@custom.homepage_writers}}]' limit='all' include='count.posts'}}
+            {{#foreach authors}}
+                <div class="c-writer-card">
+                    {{#if profile_image}}
+                        <img class="c-writer-card__image" src="{{profile_image}}" alt="{{name}}">
+                    {{/if}}
+                    <div class="c-writer-card__content">
+                        <a href="/author/{{slug}}" style="text-decoration: none; transition: text-decoration 0.3s;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                            <h3 class="c-writer-card__name">{{name}}</h3>
+                        </a>
+                        <p class="c-writer-card__bio">{{bio}}</p>
+                        
+                        {{#get "posts" filter="authors:{{slug}}" limit="1" as |latest_post|}}
+                            {{#if latest_post}}
+                                {{#foreach latest_post}}
+                                    <div class="c-writer-card__latest-post">
+                                        Latest post: <a href="{{url}}" class="c-writer-card__link">{{title}}</a>
+                                    </div>
+                                {{/foreach}}
+                            {{/if}}
+                        {{/get}}
+                        
+                        <div class="c-writer-card__links">
+                            {{#if twitter}}
+                                <a href="{{twitter_url}}" class="c-writer-card__link">Twitter</a>
+                            {{/if}}
+                            {{#if facebook}}
+                                <a href="{{facebook_url}}" class="c-writer-card__link">Facebook</a>
+                            {{/if}}
+                            {{#if website}}
+                                <a href="{{website}}" class="c-writer-card__link">Website</a>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            {{/foreach}}
+        {{/get}}
+    </div>
+</div>
+
+{{! Disable error in Ghost admin - gscan fail }}
+{{#if false}}
+{{@custom.homepage_writers}}
+{{/if}}

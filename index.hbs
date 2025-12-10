@@ -1,0 +1,13 @@
+{{!< default}}
+
+{{#contentFor 'title'}}{{t 'Latest' }}{{/contentFor}}
+
+<header class='c-page-header'>
+  <div class='o-grid o-grid--2-columns'>
+    <h1 class='c-topper__headline u-font-headline u-font-family-sansSerif'>{{t 'Latest' }}</h1>
+  </div>
+</header>
+
+{{> loop }}
+
+{{ pagination }}

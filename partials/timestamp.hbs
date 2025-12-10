@@ -1,0 +1,16 @@
+{{#match @custom.date_format "!=" "Hide Date"}}
+  <time class='c-timestamp c-{{component}}__timestamp' datetime='{{ date format='YYYY-MM-DD' }}'>
+    {{#match @custom.date_format "Month - Day - Year"}}
+      {{ date format='MM.DD.YYYY' }}
+    {{/match}}
+
+    {{#match @custom.date_format "Day - Month - Year"}}
+      {{ date format='DD.MM.YYYY' }}
+    {{/match}}
+
+    {{#match @custom.date_format "Year - Month - Day"}}
+      {{ date format='YYYY.MM.DD' }}
+    {{/match}}
+    
+  </time>
+{{/match}}

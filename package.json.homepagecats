@@ -1,0 +1,181 @@
+{
+  "name": "millmediatripoli",
+  "description": "MillMedia custom Tripoli",
+  "demo": "https://tripoli.aspirethemes.com/",
+  "docs": "https://aspirethemes.com/docs/tripoli",
+  "version": "1.0.7",
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
+  "keywords": [
+    "ghost-theme"
+  ],
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "bower": "^1.8.14",
+    "evil-icons": "^1.10.1",
+    "fslightbox": "^3.4.1",
+    "install": "^0.13.0",
+    "modern-normalize": "^2.0.0",
+    "prismjs": "^1.29.0",
+    "sass-mq": "^6.0.0",
+    "tocbot": "^4.21.3"
+  },
+  "devDependencies": {
+    "concat": "^3.0.0",
+    "fs": "^0.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-rtlcss": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0",
+    "jshint": "^2.13.6",
+    "jshint-stylish": "^2.2.1",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.66.1"
+  },
+  "author": {
+    "name": "Aspire Themes",
+    "email": "ahmad@aspirethemes.com",
+    "url": "https://aspirethemes.com/"
+  },
+  "config": {
+    "custom": {
+      "enable_search": {
+        "type": "boolean",
+        "default": true
+      },
+      "enable_post_access_label": {
+        "type": "boolean",
+        "default": true
+      },
+      "enable_post_card_excerpt": {
+        "type": "boolean",
+        "default": true
+      },
+      "enable_table_of_contents": {
+        "type": "boolean",
+        "default": true,
+        "group": "post"
+      },
+      "enable_dark_mode": {
+        "type": "boolean",
+        "default": true
+      },
+      "dark_mode_accent_color": {
+        "type": "color",
+        "default": "#F0A45C"
+      },
+      "dark_mode_publication_logo": {
+        "type": "image"
+      },
+      "date_format": {
+        "type": "select",
+        "options": [
+          "Month - Day - Year",
+          "Day - Month - Year",
+          "Year - Month - Day",
+          "Hide Date"
+        ],
+        "default": "Month - Day - Year"
+      },
+      "instagram_page": {
+        "type": "text",
+        "default": ""
+      },
+      "youtube_page": {
+        "type": "text",
+        "default": ""
+      },
+      "linkedin_page": {
+        "type": "text",
+        "default": ""
+      },
+      "homepage_writers": {
+        "type": "text",
+        "group": "homepage"
+      },      
+      "homepage_cta_headline": {
+        "type": "text",
+        "group": "homepage",
+        "default": "Join the Bell"
+      },      
+      "homepage_cta_copy": {
+        "type": "text",
+        "group": "homepage",
+        "default": "Award-winning local journalism"
+      }, 
+      "homepage_q1_copy": {
+        "type": "text",
+        "group": "homepage",
+        "default": "Fantastic local journalism"
+      },
+      "homepage_q1_name": {
+        "type": "text",
+        "group": "homepage",
+        "default": "Adam Ant"
+      },
+      "homepage_q2_copy": {
+        "type": "text",
+        "group": "homepage",
+        "default": "The best reporting!"
+      },
+      "homepage_q2_name": {
+        "type": "text",
+        "group": "homepage",
+        "default": "Maria Marion"
+      },                                                
+      "number_of_selected_posts": {
+        "type": "text",
+        "default": "4",
+        "group": "homepage"
+      },
+      "tag_slugs_for_home_sections": {
+        "type": "text",
+        "group": "homepage"
+      },
+      "number_of_posts_for_tags_home_sections": {
+        "type": "text",
+        "default": "4",
+        "group": "homepage"
+      },
+      "number_of_editors_picks_posts": {
+        "type": "text",
+        "default": "3",
+        "group": "homepage"
+      }
+    },
+    "card_assets": {
+      "exclude": [
+        "button",
+        "blockquote",
+        "bookmark",
+        "image",
+        "gallery"
+      ]
+    },
+    "posts_per_page": 16,
+    "image_sizes": {
+      "profile-image": {
+        "width": 384
+      },
+      "feature-image": {
+        "width": 652
+      },
+      "feature-image-large": {
+        "width": 1304
+      }
+    }
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.3"
+  }
+}

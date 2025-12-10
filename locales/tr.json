@@ -1,0 +1,49 @@
+{
+  "Skip to content": "içeriğe geç",
+
+  "Table of Contents": "İçindekiler",
+  "Page Not Found": "Sayfa Bulunamadı",
+
+  "Dark": "Karanlık",
+  "Light": "Işık",
+  "Search": "Ara",
+
+  "Comments": "Yorumlar",
+
+  "1 min read": "1 dakikada okunur",
+  "% min read": "% dakikada okunur",
+
+  "Share on 𝕏": "𝕏'da Paylaş",
+  "Share on Facebook": "Facebook'ta Paylaş",
+  "Share on LinkedIn": "LinkedIn'de Paylaş",
+  "Share via Email": "E-Posta ile Paylaş",
+
+  "Loading": "Yükleniyor",
+  "Load More": "Daha Fazla Gönderi",
+
+  "Featured": "Öne çıkan",
+  "Latest": "En sonuncu",
+  "Related": "İlişkili",
+  "See all": "Hepsini gör",
+  "Editors' Picks": "Editör'ün seçtikleri",
+
+  "Paid": "Ücretli",
+  "Members": "Üyeler",
+  "Public": "Herkese Açık",
+
+  "Account": "Hesap",
+  "Sign In": "Kayıt olmak",
+  "Subscribe": "Abone Ol",
+  "Email address": "E-Posta adresiniz",
+  "Please check your inbox and click the link to confirm your subscription.": "Lütfen gelen kutunuzu kontrol edin ve aboneliğinizi onaylamak için bağlantıya tıklayın.",
+  "Please enter a valid email address.": "Lütfen geçerli bir e-posta adresi girin!",
+  "An error occurred, please try again later.": "Bir hata meydana geldi, lütfen tekrar deneyin.",
+
+  "This post is for paying subscribers only": "Bu gönderi yalnızca ücretli aboneler içindir",
+  "This post is for subscribers only": "Bu gönderi yalnızca aboneler içindir",
+  "This post is for subscribers on the ": "Bu gönderi, aboneler içindir ",
+  "Upgrade your account": "Hesabınızı yükseltin",
+  "Already have an account?": "Zaten bir hesabınız var mı?",
+
+  "Published with {ghostLink} & {themeLink}": "{ghostLink} ve {themeLink} ile oluşturuldu"
+}

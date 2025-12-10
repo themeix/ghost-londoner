@@ -1,0 +1,49 @@
+{
+  "Skip to content": "Aller au contenu",
+
+  "Table of Contents": "Table des matières",
+  "Page Not Found": "Page non trouvée",
+
+  "Dark": "Sombre",
+  "Light": "Lumière",
+  "Search": "Rechercher",
+
+  "Comments": "commentaires",
+
+  "1 min read": "1 lecture min",
+  "% min read": "% lecture min",
+
+  "Share on 𝕏": "Partager sur 𝕏",
+  "Share on Facebook": "Partager sur Facebook",
+  "Share on LinkedIn": "Partager sur LinkedIn",
+  "Share via Email": "Partager par Courriel",
+
+  "Loading": "Chargement",
+  "Load More": "Plus d’articles",
+
+  "Featured": "Mis en exergue",
+  "Latest": "Dernier",
+  "Related": "Lié",
+  "See all": "Voir tout",
+  "Editors' Picks": "Editors' Picks",
+
+  "Paid": "Payant",
+  "Members": "Membres",
+  "Public": "Publique",
+
+  "Account": "Compte",
+  "Sign In": "S'identifier",
+  "Subscribe": "S’abonner",
+  "Email address": "Votre adresse courriel",
+  "Please check your inbox and click the link to confirm your subscription.": "Veuillez vérifier votre boîte de réception et cliquez sur le lien pour confirmer votre abonnement.",
+  "Please enter a valid email address.": "S'il vous plaît, mettez une adresse email valide!",
+  "An error occurred, please try again later.": "Une erreur est survenue, veuillez réessayer plus tard.",
+
+  "This post is for paying subscribers only": "Cet article est réservé aux abonnements payants",
+  "This post is for subscribers only": "Cet article est réservé aux abonnés",
+  "This post is for subscribers on the ": "Ce message est pour les abonnés sur le ",
+  "Upgrade your account": "Ameliorez votre compte",
+  "Already have an account?": "Vous avez déjà un compte?",
+
+  "Published with {ghostLink} & {themeLink}": "Publié avec {ghostLink} & {themeLink}"
+}

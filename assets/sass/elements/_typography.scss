@@ -1,0 +1,86 @@
+// ------------------------------------
+// Elements > Typography
+// ------------------------------------
+
+:where(h1, h2, h3, strong) {
+  @include font($weight: normal);
+  margin-bottom: var(--space-16);
+  line-height: 1.2;
+}
+
+:where(h1) {
+  @include font($scale: 5);
+  
+  @include mq($from: tablet) {
+    @include font($scale: 6);
+  }
+
+  @include mq($from: desktop) {
+    @include font($scale: 7);
+  }
+
+  + h2, + h3 {
+    margin-top: var(--space-16);
+  }
+}
+
+:where(h2) {
+  @include font($scale: 5);
+  
+  @include mq($from: tablet) {
+    @include font($scale: 5);
+  }
+
+  @include mq($from: desktop) {
+    @include font($scale: 6);
+  }
+
+  + h3 {
+    margin-top: var(--space-16);
+  }
+}
+
+:where(h3) {
+  @include font($scale: 4);
+  
+  @include mq($from: tablet) {
+    @include font($scale: 4);
+  }
+
+  @include mq($from: desktop) {
+    @include font($scale: 5);
+  }
+}
+
+.c-post {
+  font-family: var(--font-family-serif);
+  
+  p, li {
+    font-size: var(--font-size-scale-3);
+    line-height: 1.4;
+    /* margin-bottom: var(--space-24); */
+    
+    @include mq($from: tablet) {
+      font-size: var(--font-size-scale-3);
+    }
+    
+    @include mq($from: desktop) {
+      font-size: var(--font-size-scale-body-copy);
+    }
+  }
+
+  .c-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    
+    @include mq($from: tablet) {
+      max-width: 90%;
+      padding: 0;
+    }
+    
+    @include mq($from: desktop) {
+      max-width: 800px;
+    }
+  }
+}

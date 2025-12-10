@@ -1,0 +1,15 @@
+// ------------------------------------
+// Components > Tag
+// ------------------------------------
+
+.c-tag {
+  @include font($scale: 0, $weight: medium, $uppercase: true, $letter-spacing: brevier);
+
+  color: var(--color-text-secondary);
+
+  a {
+    @include link_underline_on_hover();
+
+    color: var(--color-accent);
+  }
+}

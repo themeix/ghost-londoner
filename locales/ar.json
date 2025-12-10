@@ -1,0 +1,49 @@
+{
+  "Skip to content": "تخطى الى المحتوى",
+
+  "Table of Contents": "جدول المحتويات",
+  "Page Not Found": "الصفحة غير موجودة",
+
+  "Dark": "ليلي",
+  "Light": "نهاري",
+  "Search": "بحث",
+
+  "Comments": "تعليقات",
+
+  "1 min read": "1 دقيقة قراءة",
+  "% min read": "% دقائق قراءة",
+
+  "Share on 𝕏": "انشر على 𝕏",
+  "Share on Facebook": "انشر على الفيسبوك",
+  "Share on LinkedIn": "انشر على لينكد إن",
+  "Share via Email": "انشر على الإيميل",
+
+  "Loading": "جار التحميل",
+  "Load More": "تحميل المزيد",
+
+  "Featured": "متميز",
+  "Latest": "أحدث المقالات",
+  "Related": "مرتبط",
+  "See all": "اظهار الكل",
+  "Editors' Picks": "اختيارات المحررين",
+
+  "Paid": "مدفوع",
+  "Members": "للأعضاء",
+  "Public": "عام",
+
+  "Account": "الحساب",
+  "Sign In": "تسجيل الدخول",
+  "Subscribe": "اشترك",
+  "Email address": "عنوان بريدك الإلكتروني",
+  "Please check your inbox and click the link to confirm your subscription.": "يرجى التحقق من صندوق الوارد الخاص بك والنقر على الرابط لتأكيد اشتراكك.",
+  "Please enter a valid email address.": "من فضلك أدخل بريد أليكترونى صحيح!",
+  "An error occurred, please try again later.": "لقد حدث خطأ، رجاء أعد المحاولة لاحقا.",
+
+  "This post is for paying subscribers only": "هذه المشاركة للمشتركين في باقة فقط",
+  "This post is for subscribers only": "هذا المنشور مخصص للمشتركين فقط",
+  "This post is for subscribers on the ": "هذا المنشور للمشتركين على ",
+  "Upgrade your account": "قم بترقية حسابك",
+  "Already have an account?": "هل لديك حساب؟",
+
+  "Published with {ghostLink} & {themeLink}": "نشرت مع {ghostLink} & {themeLink}"
+}

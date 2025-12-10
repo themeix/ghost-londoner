@@ -1,0 +1,33 @@
+// ------------------------------------
+// Components > Color Mode
+// ------------------------------------
+
+.c-color-mode-btn {
+  &:before {
+    @include font($scale: 2);
+
+    @include mq($until: tablet) {
+      @include font($scale: 3);
+    }
+  }
+
+  @include hover() {
+    text-decoration: none;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+[data-colormode='dark'] {
+  &:before {
+    content: var(--html-symbol-dark);
+  }
+}
+
+[data-colormode='light'] {
+  &:before {
+    content: var(--html-symbol-light);
+  }
+}

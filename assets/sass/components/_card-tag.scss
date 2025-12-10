@@ -1,0 +1,15 @@
+// ------------------------------------
+// Components > Tag Card
+// ------------------------------------
+
+.c-tag-card {
+  display: block;
+  padding: var(--space-24);
+  border-radius: var(--border-radius);
+  background-color: var(--color-background-secondary);
+  border-left: var(--space-4) solid var(--color-accent-tag, var(--color-accent));
+
+  &__name {
+    @include font($scale: 3);
+  }
+}

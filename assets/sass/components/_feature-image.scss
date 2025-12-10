@@ -1,0 +1,36 @@
+// ------------------------------------
+// Components > Feature Image
+// ------------------------------------
+
+.c-feature-image-figure {
+  margin-top: var(--space-32);
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.c-feature-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #f0f0f0; // Light background while image loads
+}
+
+.c-feature-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.c-feature-image-caption {
+  @include caption();
+  padding: 0.5rem;
+  font-size: var(--font-size-scale-1);
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-scale-2);
+  }
+}

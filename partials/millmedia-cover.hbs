@@ -1,0 +1,68 @@
+<div id="millmedia-cover" class="millmedia-cover">
+  <div class="millmedia-cover-content">
+    <button type="button" class="millmedia-close-btn" onclick="hideCover()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="millmedia-logo-container">
+      <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}">
+    </div>
+    <div class="millmedia-cta-text">            
+      Join {{total_members}} subscribers on our free mailing list.&nbsp;{{@custom.popup_cta}}
+    </div>
+    <form id="millmedia-subscription" class="millmedia-subscription-form plausible-event-name=Cover+signup" data-members-form >
+      <input class="u-font-family-serif" data-members-name type="text" placeholder="Name" required />
+      <input class="u-font-family-serif" data-members-email type="email" placeholder="e-mail" required />
+      <input data-members-label type="hidden" value="The Londoner cover" />
+      <button class="millmedia-btn" type="submit">Subscribe</button>
+      <button type="button" class="millmedia-skip-btn" onclick="hideCover()">Continue to site →</button>      
+      <div class="millmedia-messages">
+        <div class="success">Please check your inbox and click the link to complete signup, Thank You!</div>
+        <div class="error">Sorry, something went wrong. Please try again.</div>
+        <div class="loading">Please hold while we check our collection.</div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var cover = document.getElementById('millmedia-cover');
+    
+    function shouldShowCover() {
+
+      // Check if URL contains #share
+      if (window.location.hash === '#share' || window.location.hash === '#nobanner') {
+        return false;
+      }
+
+      var lastShown = localStorage.getItem('millmedia_cover_last_shown');
+      if (!lastShown) {
+        return true;
+      }
+      var lastShownDate = new Date(parseInt(lastShown));
+      var currentDate = new Date();
+      return currentDate.getDate() !== lastShownDate.getDate() ||
+             currentDate.getMonth() !== lastShownDate.getMonth() ||
+             currentDate.getFullYear() !== lastShownDate.getFullYear();
+    }
+
+    if (shouldShowCover()) {
+      cover.style.display = 'block';
+    }
+
+    window.hideCover = function() {
+      cover.style.display = 'none';
+      localStorage.setItem('millmedia_cover_last_shown', Date.now().toString());
+    }
+
+    // Prevent form submission reload while keeping Ghost members functionality
+    document.querySelector('#millmedia-subscription').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Ghost members form will still process in the background
+      // due to the data-members-form attribute
+    });
+  })();
+</script>

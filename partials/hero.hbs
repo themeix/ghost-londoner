@@ -1,0 +1,35 @@
+<div class='o-grid'>
+  <div class='c-hero'>
+
+    <h2 class='u-screenreader'>{{t 'Featured' }}</h2>
+
+    <div class='left c-stack-stories'>
+      {{#get 'posts' order="published_at desc" include='tags,authors' limit='3' }}  
+        {{#foreach posts}}
+          {{#unless @first}}
+            {{> card showExcerpt=true }}
+          {{/unless}}
+        {{/foreach}}
+      {{/get}}
+    </div>
+
+    <div class='center'>
+      {{#get 'posts' order="published_at desc" include='tags,authors' limit='1' }}
+        {{#foreach posts}}
+          {{> card cardSize='large' cardAlign='center' showExcerpt=true showRedline=true }}
+        {{/foreach}}
+      {{/get}}
+    </div>
+
+    <div class='right c-stack-stories'>
+      {{#get 'posts' filter='tag:hash-p1select+featured:false' order="published_at desc" include='tags,authors' limit=6}}
+        {{#if posts}}
+          {{#foreach posts}}
+            {{> teaser teaserSize='small' }}
+          {{/foreach}}
+        {{/if}}
+      {{/get}}
+    </div>
+
+  </div>
+</div>

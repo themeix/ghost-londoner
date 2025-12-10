@@ -1,0 +1,40 @@
+// ------------------------------------
+// Components > Byline
+// ------------------------------------
+
+.c-byline {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  text-transform: uppercase;
+  font-size: var(--font-size-scale-0);
+  line-height: var(--line-height-scale-1);
+  font-family: var(--font-family-meta);
+  font-weight: var(--font-family-meta-weight);
+  letter-spacing: var(--font-family-meta-spacing);
+
+  a {
+    font-size: var(--font-size-scale-0);
+    line-height: var(--line-height-scale-0);
+    font-weight: var(--font-family-meta-weight);
+    text-transform: uppercase;
+    letter-spacing: var(--font-family-meta-spacing);
+    font-family: var(--font-family-meta);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-size: var(--font-size-scale-0);
+    line-height: var(--line-height-scale-0);
+    font-weight: var(--font-family-meta-weight);
+    font-family: var(--font-family-meta);
+    letter-spacing: var(--font-family-meta-spacing);
+  }
+}
+
+.c-topper__content .c-byline {
+  font-size: var(--font-size-scale-1);
+}

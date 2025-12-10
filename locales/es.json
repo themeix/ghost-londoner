@@ -1,0 +1,49 @@
+{
+  "Skip to content": "ir al contenido",
+
+  "Table of Contents": "Tabla de contenido",
+  "Page Not Found": "Página no encontrada",
+
+  "Dark": "Oscura",
+  "Light": "Ligera",
+  "Search": "Buscar",
+
+  "Comments": "Comentarios",
+
+  "1 min read": "1 minuto de lectura",
+  "% min read": "% minutos de lectura",
+
+  "Share on 𝕏": "Compartir en 𝕏",
+  "Share on Facebook": "Compartir en Facebook",
+  "Share on LinkedIn": "Compartir en LinkedIn",
+  "Share via Email": "Compartir via Email",
+
+  "Loading": "Cargando",
+  "Load More": "Más artículos",
+
+  "Featured": "Presentado",
+  "Latest": "Más reciente",
+  "Related": "Relacionada",
+  "See all": "Ver todo",
+  "Editors' Picks": "Destacados",
+
+  "Paid": "Pagado",
+  "Members": "Miembros",
+  "Public": "Público",
+
+  "Account": "Cuenta",
+  "Sign In": "Registrarse",
+  "Subscribe": "Suscríbete",
+  "Email address": "Tu correo electrónico",
+  "Please check your inbox and click the link to confirm your subscription.": "Verifica tu bandeja de entrada y haz clic en el enlace para confirmar tu suscripción.",
+  "Please enter a valid email address.": "Por favor, introduce una dirección de correo electrónico válida",
+  "An error occurred, please try again later.": "Se ha producido un error. Vuelve a intentarlo más tarde.",
+
+  "This post is for paying subscribers only": "Esta publicación es solo para suscriptores de pago",
+  "This post is for subscribers only": "Esta publicación es solo para suscriptores",
+  "This post is for subscribers on the ": "Esta publicación es para suscriptores en el ",
+  "Upgrade your account": "Actualiza tu cuenta",
+  "Already have an account?": "¿Ya tienes una cuenta?",
+
+  "Published with {ghostLink} & {themeLink}": "Publicado con {ghostLink} y {themeLink}"
+}

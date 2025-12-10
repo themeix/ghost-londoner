@@ -1,0 +1,41 @@
+<div class="c-signup-section">
+    <div class="o-grid">
+        <div class="border-top"></div>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h1>{{@custom.homepage_cta_headline}}</h1>
+                <span class="ctacopy"><p>{{@custom.homepage_cta_copy}}</p><span>
+                <form class="subscription-form" data-members-form="signup">
+                    <div class="form-inputs">
+                        <input type="email" data-members-email placeholder="email" required />
+                        <button class="c-btn c-btn--small plausible-event-name=Signup+Banner" type="submit">Sign up</button>
+                    </div>
+                    <div class="message-container">
+                        <div class="success">Please check your inbox and click the link to complete signup, Thank You!</div>
+                        <div class="error">
+                            Sorry, something went wrong. Please try again.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="flex-item">
+                <div class="quote">
+                    <p>"{{@custom.homepage_q1_copy}}"</p>
+                    <p><span class="qname">{{@custom.homepage_q1_name}}</span></p>
+                </div>
+                <div class="quote">
+                    <p>"{{@custom.homepage_q2_copy}}"</p>
+                    <p><span class="qname">{{@custom.homepage_q2_name}}</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.querySelector('.subscription-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Ghost members form will still process in the background
+    // due to the data-members-form attribute
+});
+</script>

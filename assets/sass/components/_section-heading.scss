@@ -1,0 +1,45 @@
+// ------------------------------------
+// Components > Section Heading
+// ------------------------------------
+
+.c-section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: var(--space-8);
+  margin-bottom: var(--space-24);
+  @include font($family: sansSerif, $scale: 7, $line-height: 7);
+
+  .c-section & {
+    color: var(--color-black);
+  }
+
+  .c-section & a {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s ease-in-out;
+    padding-bottom: 4px;
+    display: inline-block;
+
+    &:hover {
+      border-bottom-color: var(--color-black);
+    }
+  }
+
+  &__title {
+    @include font($family: sansSerif, $scale: 7, $line-height: 7);
+
+    a {
+      @include link_underline_on_hover();
+    }
+  }
+
+  &__title--small {
+    @include font($scale: 3, $line-height: 4);
+  }
+
+  &__all {
+    @include link_underline_on_hover();
+    @include font($scale: 0, $weight: medium, $uppercase: true, $letter-spacing: brevier);
+  }
+}

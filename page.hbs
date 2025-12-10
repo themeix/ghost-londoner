@@ -1,0 +1,19 @@
+{{!< default}}
+
+{{#contentFor 'title'}}{{ meta_title }}{{/contentFor}}
+
+{{#post}}
+  {{#match @page.show_title_and_feature_image}}
+    {{> topper }}
+  {{/match}}
+
+  <article class='c-post {{ post_class }}'>
+    <div class='c-content {{#unless access}} c-content--has-shadow {{/unless}}'>
+      {{ content }}
+    </div>
+
+    {{#unless access}}
+      {{> upgrade }}
+    {{/unless}}
+  </article>
+{{/post}}

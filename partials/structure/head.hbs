@@ -1,0 +1,30 @@
+<head>
+  <meta charset='utf-8'>
+  <title>{{{ block 'title' }}}</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+
+    {{> css/dist/style }}
+
+  {{#if @custom.enable_dark_mode}}
+    {{> dark-mode-accent-color }}
+    {{> dark-mode-js }}
+  {{/if}}
+
+  {{> preload }}
+
+  <script>
+    var pagination_next_page_number       = '{{ pagination.next }}',
+        pagination_available_pages_number = '{{ pagination.pages }}',
+        pagination_loading_text           = '{{t "Loading" }}',
+        pagination_more_posts_text        = '{{t "Load More" }}',
+        dark_mode_label_text              = '{{t "Dark" }}',
+        light_mode_label_text             = '{{t "Light" }}';
+
+    document.documentElement.classList.add('js-on');
+  </script>
+
+  <link rel="shortcut icon" href="{{asset 'fonts/bookmark-icon.ico'}}" type="image/x-icon">
+
+  {{ ghost_head }}
+</head>

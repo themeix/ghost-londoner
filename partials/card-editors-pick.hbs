@@ -1,0 +1,37 @@
+<article class='c-editors-pick {{ post_class }}'>
+  {{#if feature_image}}
+    <a href='{{ url }}' class='c-editors-pick__media'>
+      <img
+        loading='lazy'
+        decoding='async'
+        class='c-editors-pick__image'
+        alt="{{#if feature_image_alt}}{{ feature_image_alt }}{{ else }}{{ title }}{{/if}}"
+        src='{{ img_url feature_image size='feature-image-large' format='webp' }}'
+      >
+    </a>
+  {{/if}}
+
+  <div class='c-editors-pick__content'>
+    <div class='c-editors-pick__tag c-tag c-editors-pick__text'>
+      {{ tags separator='' limit='1' }}
+    </div>
+
+    <h3 class='c-editors-pick__headline c-editors-pick__text'><a href='{{ url }}' class='c-card__link'>{{ title }}</a></h3>
+
+    {{#if showExcerpt}}
+      {{#if @custom.enable_post_card_excerpt}}
+        <p class='c-editors-pick__standfirst c-editors-pick__text'>{{ excerpt }}</p>
+      {{/if}}
+    {{/if}}
+
+    <div class='c-editors-pick__meta c-editors-pick__text'>
+      {{> byline component='card'}}
+
+      <div class='u-flex u-align-items-center u-gap-8'>
+        {{! > timestamp component='card'}}
+
+        {{> visibility-label component='editors-pick'}}
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,49 @@
+<article class='js-card c-card c-card--{{cardSize}} c-card--{{cardAlign}} {{ post_class }}'>
+  {{#if feature_image}}
+    <a href='{{ url }}' class='c-card__media'>
+      <img
+        loading='{{#match cardSize "large"}}eager{{else}}lazy{{/match}}'
+        fetchpriority='{{#match cardSize "large"}}high{{else}}auto{{/match}}'
+        decoding='async'
+        class='c-card__image'
+        alt="{{#if feature_image_alt}}{{ feature_image_alt }}{{ else }}{{ title }}{{/if}}"
+        src='{{ img_url feature_image size='feature-image-large' format='webp' }}'
+      >
+    </a>
+  {{/if}}
+
+  <div class='c-card__content'>
+    {{#if showRedline}}
+      <div class="c-card__divider"></div>
+    {{/if}}
+
+    <h3 class='c-card__headline'><a href='{{ url }}' class='c-card__link'>{{ title }}</a></h3>
+
+    {{#match cardSize 'large'}}
+      <p class='c-card__standfirst'>{{ custom_excerpt }}</p>
+    {{else}}
+      {{#if showExcerpt}}
+        {{#if @custom.enable_post_card_excerpt}}
+          <p class='c-card__standfirst'>{{ custom_excerpt }}</p>
+        {{/if}}
+      {{/if}}
+    {{/match}}
+
+    <div class='c-card__meta'>
+      
+      <div class='u-flex u-align-items-center u-gap-8'>
+        {{> byline component='card'}}
+        {{> timestamp component='card'}}
+        <div class="c-card__comment-wrapper">
+            <a href="{{ url }}#comment-section" style="display: inline-flex; align-items: center; gap: var(--space-4); text-decoration: none; color: inherit;">
+                <img src="{{ asset 'fonts/comment-icon-100.png' }}" width="13px" height="13px" class="c-card__comment-icon">
+                <span class="c-timestamp c-card__timestamp" data-cove-count-comments="{{id}}" data-translate-comment="" data-translate-comments=""></span>          
+            </a>     
+        </div>
+
+        {{> visibility-label }}
+
+      </div>
+    </div>
+  </div>
+</article>

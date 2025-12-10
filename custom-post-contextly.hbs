@@ -1,0 +1,56 @@
+{{!< default}}
+
+{{#contentFor 'title'}}{{ meta_title }}{{/contentFor}}
+
+{{#post}}
+  {{> topper }}
+
+  <article class='c-post {{ post_class }}'>
+    {{#if access}}
+
+      {{#has tag='#table-of-content'}}
+        {{> table-of-contents }}
+      {{/has}}
+    {{/if}}
+
+    <div class='c-content {{#unless access}} c-content--has-shadow {{/unless}}'>
+      {{ content }}
+    </div>
+
+    {{#unless access}}
+      {{> upgrade }}
+    {{/unless}}
+
+    {{!-- GhostFlow MH - Web Share API --}}
+       <a href="#" data-webshare  class="c-webshare-banner plausible-event-name=sharingbanner">
+      <img src="{{asset "fonts/londoner_300w.png"}}" alt="Share logo" class="c-webshare-banner__logo">
+      <p class="c-webshare-banner__cta">{{@custom.share_cta}}</p>
+    </a>
+
+    <br>
+
+
+    {{!-- GhostFlow MH - Cove Comments --}}
+    <div id="comment-section"></div>
+    {{> comments}}
+
+  </article>
+{{/post}}
+
+{{!> related }}
+
+    <div class='c-section c-section--latest'>
+      <div class='o-grid'>
+        <div class='c-section-heading'>
+          <h2 class='c-section-heading__title'>{{t 'Recommended' }}</h2>
+        </div>
+      </div>
+
+      <div class='o-grid'>
+      {{> integrations/contextly-module}}
+      </div>
+    </div>
+
+
+
+

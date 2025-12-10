@@ -1,0 +1,40 @@
+// ------------------------------------
+// Components > Card Audio / Editor
+// ------------------------------------
+
+.c-content {
+  .kg-audio-card {
+    padding: var(--space-32);
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 0 0 var(--border-width) var(--color-border-secondary);
+
+    @include mq($until: tablet) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .kg-audio-title {
+    @include font($scale: 4, $weight: bold);
+  }
+
+  .kg-audio-player * {
+    @include font($scale: 2);
+  }
+
+  .kg-audio-seek-slider {
+    @include mq($until: desktop) {
+      display: none;
+    }
+  }
+
+  .kg-audio-time {
+    color: var(--color-text-secondary);
+  }
+
+  .kg-audio-thumbnail {
+    width: var(--space-96);
+    min-width: var(--space-96);
+    margin: 0 var(--space-8) 0 0;
+    border-radius: var(--border-radius);
+  }
+}

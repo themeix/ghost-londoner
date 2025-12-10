@@ -1,0 +1,68 @@
+{{!< default}}
+
+<style>
+.c-card-archive__title {
+    margin-bottom: 0;
+    font-size: var(--font-size-scale-4);
+    line-height: var(--line-height-scale-4);
+}
+.archive-authors {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-family-meta);
+    font-weight: var(--font-family-meta-weight);
+    letter-spacing: var(--font-family-meta-spacing);
+    text-transform: uppercase;
+    font-size: var(--font-size-scale-0);
+    line-height: var(--line-height-scale-0);
+}
+.archive-authors span {
+    font-size: var(--font-size-scale-0);
+    line-height: var(--line-height-scale-0);
+    font-weight: var(--font-family-meta-weight);
+    font-family: var(--font-family-meta);
+    letter-spacing: var(--font-family-meta-spacing);
+}
+</style>
+
+{{#contentFor 'title'}}{{ meta_title }}{{/contentFor}}
+
+{{#post}}
+  {{> topper }}
+
+  <div class='c-post {{ post_class }}'>
+    {{#get 'posts' limit='all' include='authors' as |posts|}}
+      {{#if posts}}
+        {{#foreach posts}}
+          <div class='c-card-archive c-card-archive--date-{{date format='M'}}'>
+            <div class='c-card-archive__meta'>
+              <div class='c-card-archive__date u-type-uppercase'>{{ date format='MMMM YYYY' }}</div>
+            </div>
+
+            <div class='c-card-archive__content'>
+              <h2 class='c-card-archive__title'>
+                <time class='c-card-archive__date-mini' datetime='{{ date format='YYYY-MM-DD' }}'>{{ date format='D' }}:</time>
+                <a href='{{ url }}' class='c-card-archive__url'>{{ title }}</a>                
+              </h2> 
+              <div class="archive-authors">
+
+            {{#has author="Contributors"}}
+                 {{codeinjection_foot}}
+            {{else}}
+                {{#foreach authors}}
+                    <span class='{{#if @first}}u-hidden{{/if}} {{#if @last}}u-hidden{{/if}}'>,&nbsp;</span>
+                    <span class='u-hidden {{#if @last}}{{#unless @first}}u-block{{/unless}}{{/if}}'>&nbsp;and&nbsp;</span>
+                    <span class="author-name">{{ name }}</span>
+                {{/foreach}}
+            {{/has}}
+  
+              
+              
+              </div>                                
+            </div>            
+          </div>
+        {{/foreach}}
+      {{/if}}
+    {{/get}}
+  </div>
+{{/post}}

@@ -1,0 +1,72 @@
+// ------------------------------------
+// Components > Logo
+// ------------------------------------
+
+.c-logo {
+  display: block;
+  margin-left: 0;
+  width: 100%;
+
+  &__link {
+    @include font($scale: 6, $weight: medium);
+    display: block;
+  }
+
+  &__img {
+    width: auto;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+    margin-left: 0;
+
+    @include mq($from: tablet) {
+      width: 500px;
+      height: auto;
+      max-height: none;
+      margin-left: 0;
+    }
+  }
+}
+
+// Footer specific logo styles
+.c-footer__logo {
+  .c-logo__img {
+    max-height: 40px;
+    width: auto;
+    margin: 0 auto;
+
+    @include mq($from: tablet) {
+      width: 550px;
+      height: auto;
+      max-height: none;
+    }
+  }
+}
+
+.c-logo__dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-user-color-scheme]).is-darkModeAdminSetting-enabled {
+    .c-logo__dark {
+      display: block;
+    }
+
+    .c-logo__light {
+      display: none;
+    }
+  }
+}
+
+[data-user-color-scheme='dark'] {
+  .c-logo__dark {
+    display: block;
+  }
+
+  .c-logo__light {
+    display: none;
+  }
+}

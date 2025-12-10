@@ -1,0 +1,31 @@
+// ------------------------------------
+// Components > Timestamp
+// ------------------------------------
+
+.c-timestamp {
+  @include font($scale: 0, $weight: medium);
+  color: var(--ghost-accent-color);
+  font-family: var(--font-family-meta);
+  font-weight: var(--font-family-meta-weight);
+  letter-spacing: var(--font-family-meta-spacing);
+
+  .c-topper__meta-line & {
+    @include font($scale: 1);
+    color: var(--ghost-accent-color);
+    text-transform: uppercase;
+    display: inline;
+    font-family: var(--font-family-meta);
+    font-weight: var(--font-family-meta-weight);
+    letter-spacing: var(--font-family-meta-spacing);
+  }
+
+  .home-latest & {
+    @include font($scale: 0);
+    color: var(--ghost-accent-color);
+    text-transform: uppercase;
+    display: inline;
+    font-family: var(--font-family-meta);
+    font-weight: var(--font-family-meta-weight);
+    letter-spacing: var(--font-family-meta-spacing);
+  }
+}

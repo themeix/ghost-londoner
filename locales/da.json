@@ -1,0 +1,49 @@
+{
+  "Skip to content": "spring til indhold",
+
+  "Table of Contents": "Indholdsfortegnelse",
+  "Page Not Found": "Siden blev ikke fundet",
+
+  "Dark": "Mørk",
+  "Light": "Lys",
+  "Search": "Søg",
+
+  "Comments": "Kommentarer",
+
+  "1 min read": "1 minut læses",
+  "% min read": "% minut læses",
+
+  "Share on 𝕏": "Del på 𝕏",
+  "Share on Facebook": "Del på Facebook",
+  "Share on LinkedIn": "Del på LinkedIn",
+  "Share via Email": "Del via e-mail",
+
+  "Loading": "Indlæser",
+  "Load More": "Flere indlæg",
+
+  "Featured": "Udvalgte",
+  "Latest": "Seneste",
+  "Related": "Relaterede",
+  "See all": "Se alt",
+  "Editors' Picks": "Redaktørens valg",
+
+  "Paid": "betalt",
+  "Members": "Medlemmer",
+  "Public": "Offentlig",
+
+  "Account": "Konto",
+  "Sign In": "Log ind",
+  "Subscribe": "Tilmeld",
+  "Email address": "Email adresse",
+  "Please check your inbox and click the link to confirm your subscription.": "Kontroller din indbakke, og klik på linket for at bekræfte dit abonnement.",
+  "Please enter a valid email address.": "Indtast venligst en gyldig e-mailadresse!",
+  "An error occurred, please try again later.": "Der opstod en fejl. Prøv venligst igen senere.",
+
+  "This post is for paying subscribers only": "Dette indlæg er kun til betalende abonnenter",
+  "This post is for subscribers only": "Dette indlæg er kun til abonnenter",
+  "This post is for subscribers on the ": "Dette indlæg er for abonnenter på ",
+  "Upgrade your account": "Opgrader din konto",
+  "Already have an account?": "har du allerede en bruger?",
+
+  "Published with {ghostLink} & {themeLink}": "Udgivet med {ghostLink} & {themeLink}"
+}

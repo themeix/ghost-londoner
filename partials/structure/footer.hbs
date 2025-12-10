@@ -1,0 +1,22 @@
+<footer class='c-footer'>
+  <div class='o-grid c-footer__content'>
+
+  <div class='c-logo__light c-footer__logo'>  
+      <a href='{{ @site.url }}' class='u-block'>
+        <img class='c-logo__img' src='{{ @custom.dark_mode_publication_logo }}' alt='{{ @site.title }}' width='200' height='60'>
+      </a>
+  </div>
+  
+    {{> social-icons }}
+
+    {{#if @site.secondary_navigation}}
+      <ul class='u-plain-list c-footer-nav'>
+        {{ navigation type='secondary' }}
+      </ul>
+    {{/if}}
+
+    <div class='c-footer-copy c-footer-text'>
+      &copy; {{ date format='YYYY' }} <span class="c-footer-text">{{ @site.title }}</span>      
+    </div>
+  </div>
+</footer>

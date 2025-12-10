@@ -1,0 +1,194 @@
+// ------------------------------------
+// Components > Header
+// ------------------------------------
+
+.c-header {
+  margin-bottom: var(--space-32);
+  box-shadow: rgba(0, 0, 0, .08) 0 0 var(--space-4) var(--space-2);
+
+  [data-user-color-scheme='dark'] & {
+    border-bottom: var(--border-width) var(--border-style) var(--color-border-secondary);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-user-color-scheme]).is-darkModeAdminSetting-enabled & {
+      border-bottom: var(--border-width) var(--border-style) var(--color-border-secondary);
+    }
+  }
+
+  &__banner {
+    height: 30px;
+    background-color: var(--ghost-accent-color);
+    width: 100%;
+  }
+
+
+  
+  &__bottom {
+    padding: var(--space-16) 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .o-grid {
+      @include mq($until: tablet) {
+        padding-left: var(--space-12);
+        padding-right: var(--space-12);
+      }
+    }
+  }
+
+  &__nav-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-16);
+    min-width: min-content;
+  }
+
+  &__utils {
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+    white-space: nowrap;
+  }
+
+  &__top {
+    padding: var(--space-24) 0;
+    border-bottom: 2px solid black;
+
+    @include mq($from: tablet) {
+      padding-top: 30px;
+      padding-bottom: 90px;
+    }
+  }
+
+  &__top-block {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+
+    @include mq($from: desktop) {
+      gap: var(--space-16);
+    }
+  }
+
+  &__top-inner {
+    display: grid;
+    gap: var(--space-16);
+    align-items: center;
+
+    @include mq($until: tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mq($from: tablet) {
+      grid-template-columns: 550px 1fr auto;
+      grid-template-areas: "logo center right";
+    }
+  }
+
+  &__top-left {
+    @include mq($from: tablet) {
+      grid-area: logo;
+      justify-content: flex-start;
+    }
+  }
+
+  &__top-center {
+    @include mq($from: tablet) {
+      grid-area: center;
+    }
+  }
+
+  &__top-right {
+    @include mq($from: tablet) {
+      grid-area: right;
+    }
+  }
+
+  @include mq($until: tablet) {
+    &__nav-wrap {
+      gap: var(--space-8);
+    }
+
+    &__utils {
+      gap: var(--space-8);
+    }
+
+    &__top-left {
+      order: 1;
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    &__top-center {
+      display: none;
+    }
+
+    &__top-right {
+      display: none;
+    }
+  }
+}
+
+.c-header__button {
+  font-family: "IIBalfron", Verdana, Segoe UI, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  white-space: nowrap;
+  font-size: 27px;
+  position: relative;
+  padding: 4px 0;
+  letter-spacing: 0.03em;
+
+  svg {
+    width: var(--space-24);
+    height: var(--space-24);
+    fill: var(--color-text-primary);
+  }
+
+  @include mq($until: tablet) {
+    font-size: 25px;
+  }
+
+  @include mq($until: mobile) {
+    font-size: 25px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-text-primary);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: var(--color-text-primary);
+    
+    &:after {
+      transform: scaleX(1);
+    }
+
+    svg {
+      fill: var(--color-text-primary);
+    }
+  }
+}

@@ -1,0 +1,52 @@
+
+<style>
+ .c-social-icons__item .c-social-icons__icon {
+    fill: #08061d;
+}
+</style>
+
+
+
+<ul class='c-social-icons u-plain-list'>
+  {{#if @site.twitter}}
+    <li class='c-social-icons__item'>
+      <a href='{{ twitter_url }}' class='c-social-icons__link'>
+        <span>𝕏</span>
+      </a>
+    </li>
+  {{/if}}
+
+  {{#if @custom.bluesky_page}}
+    <li class='c-social-icons__item'>
+      <a href='{{ @custom.bluesky_page }}' class='c-social-icons__link'>
+        <span class='c-social-icons__icon'>
+          {{> "icons/bluesky"}}
+        </span>
+        <span class='u-screenreader'>BlueSky</span>
+      </a>
+    </li>
+  {{/if}}
+
+
+  {{#if @site.facebook}}
+    <li class='c-social-icons__item'>
+      <a href='{{ facebook_url }}' class='c-social-icons__link'>
+        <span class='c-social-icons__icon' data-icon='ei-sc-facebook' data-size='s'></span>
+        <span class='u-screenreader'>Facebook</span>
+      </a>
+    </li>
+  {{/if}}
+
+  {{#if @custom.instagram_page}}
+    <li class='c-social-icons__item'>
+      <a href='{{ @custom.instagram_page }}' class='c-social-icons__link'>
+        <span class='c-social-icons__icon' data-icon='ei-sc-instagram' data-size='s'></span>
+        <span class='u-screenreader'>Instagram</span>
+      </a>
+    </li>
+  {{/if}}
+
+
+
+
+</ul>

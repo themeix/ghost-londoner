@@ -1,0 +1,19 @@
+// ------------------------------------
+// Elements > Page
+// ------------------------------------
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @include font($family: serif, $scale: 2, $weight: normal);
+
+  direction: ltr;
+  color: var(--color-text-primary);
+  background-color: var(--color-background-primary);
+
+  -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}

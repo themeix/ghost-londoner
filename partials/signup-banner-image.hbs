@@ -1,0 +1,182 @@
+<div class="c-section c-signup-banner">
+  <div class="c-signup-banner__content">
+    <div class="c-signup-banner__wrapper">
+      <div class="c-signup-banner__image">
+        <p>No image</p>
+      </div>
+      <div class="c-signup-banner__form-container">
+        <h2 class="c-signup-banner__title">{{@custom.homepage_cta_headline}}</h2>
+        <p class="c-signup-banner__description">{{@custom.homepage_cta_copy}}</p>
+
+         <button onclick="window.location.href='#/portal/'" type="submit" class="c-btn c-btn--primary c-signup-banner__submit">Subscribe</button>
+          
+          <div class="c-signup-banner__messages">
+            <div class="success">Please check your inbox and click the link to complete signup, Thank You!</div>
+            <div class="error">Sorry, something went wrong. Please try again.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.c-signup-banner {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-main);
+  padding: 2rem;
+}
+
+.c-signup-banner__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-signup-banner__image {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.c-signup-banner__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c-signup-banner__form-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: left;
+}
+
+.c-signup-banner__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-scale-8);
+  line-height: var(--line-height-scale-6);
+}
+
+.c-signup-banner__description {
+  margin-bottom: 1.5rem; 
+  font-family: var(--font-family-serif);
+  font-size: var(--font-size-scale-3);
+  line-height: var(--line-height-scale-4);
+}
+
+.c-signup-banner__form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.c-signup-banner__form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.c-signup-banner__input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+.c-signup-banner__submit {
+  padding: 0.75rem 1.5rem;
+}
+
+.c-signup-banner__messages {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 769px) {
+  .c-signup-banner__wrapper {
+    padding: 2rem;
+  }
+
+  .c-signup-banner__image {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding-right: 2rem;
+  }
+
+  .c-signup-banner__form-container {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-signup-banner__wrapper {
+    flex-direction: column;
+  }
+
+  .c-signup-banner__image {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .c-signup-banner__form-container {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .c-signup-banner__form {
+    grid-template-columns: 1fr;
+  }
+
+  .c-signup-banner__submit {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .c-signup-banner__title {
+    margin-bottom: 0.8rem;
+    font-size: var(--font-size-scale-8);
+    line-height: var(--line-height-scale-8);
+  }
+}
+
+/* New styles for desktop alignment */
+@media (min-width: 1024px) {
+  .c-signup-banner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .c-signup-banner__wrapper {
+    justify-content: center;
+  }
+}
+
+/* Form states */
+.c-signup-banner__messages :where(.success, .error)  {
+    display: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.c-signup-banner__form--loading + .c-signup-banner__messages .loading,
+.c-signup-banner__form--success + .c-signup-banner__messages .success,
+.c-signup-banner__form--error + .c-signup-banner__messages .error {
+    display: block;
+}
+
+.c-signup-banner__messages .success {
+    background-color: var(--color-success-bg);
+    color: var(--color-success-text);
+    border: 1px solid var(--color-success-border);
+}
+
+.c-signup-banner__messages .error {
+    background-color: var(--color-error-bg);
+    color: var(--color-error-text);
+    border: 1px solid var(--color-error-border);
+}
+</style>

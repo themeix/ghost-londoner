@@ -1,0 +1,49 @@
+{
+  "Skip to content": "siirry sisältöön",
+
+  "Table of Contents": "Sisällysluettelo",
+  "Page Not Found": "Sivua ei löydetty",
+
+  "Dark": "Tumma",
+  "Light": "Kevyt",
+  "Search": "Hae",
+
+  "Comments": "Kommentit",
+
+  "1 min read": "1 minuutti lukea",
+  "% min read": "% minuutti lukea",
+
+  "Share on 𝕏": "Jaa 𝕏",
+  "Share on Facebook": "Jaa Facebook",
+  "Share on LinkedIn": "Jaa LinkedIn",
+  "Share via Email": "Jaa sähköpostitse",
+
+  "Loading": "Ladataan",
+  "Load More": "Lisää artikkelit",
+
+  "Featured": "Esittelyssä",
+  "Latest": "Viimeisin",
+  "Related": "Liittyvät",
+  "See all": "Näytä kaikki",
+  "Editors' Picks": "Toimittajien valinnat",
+
+  "Paid": "Maksettu",
+  "Members": "Jäsenet",
+  "Public": "Julkinen",
+
+  "Account": "Tili",
+  "Sign In": "Kirjaudu sisään",
+  "Subscribe": "Tilaa",
+  "Email address": "Sähköpostiosoitteesi",
+  "Please check your inbox and click the link to confirm your subscription.": "Tarkista postilaatikko ja napsauta linkkiä vahvistaaksesi tilauksesi.",
+  "Please enter a valid email address.": "Ole hyvä ja syötä toimiva sähköpostiosoite!",
+  "An error occurred, please try again later.": "Tapahtui virhe, yritä myöhemmin uudelleen.",
+
+  "This post is for paying subscribers only": "Tämä viesti on tarkoitettu vain maksaville tilaajille",
+  "This post is for subscribers only": "Tämä viesti on tarkoitettu vain tilaajille",
+  "This post is for subscribers on the ": "Tämä viesti on tilaajille ",
+  "Upgrade your account": "Päivitä käyttäjätilisi",
+  "Already have an account?": "Onko sinulla jo tili?",
+
+  "Published with {ghostLink} & {themeLink}": "Julkaistu {ghostLink} & {themeLink}"
+}

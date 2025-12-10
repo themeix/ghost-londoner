@@ -1,0 +1,19 @@
+<div class='c-section c-section--{{slug}}'>
+  <div class='o-grid'>
+    <div class='c-section-heading'>
+      <h2 class='c-section-heading'><a href='{{ url }}'>{{ name }}</a></h2>
+
+
+    </div>
+  </div>
+
+  <div class='o-grid o-grid--4-columns'>
+    {{#get 'posts' filter='tags:{{slug}}' include='tags,authors' limit=4 as |posts|}}
+      {{#if posts}}
+        {{#foreach posts}}
+          {{> card showExcerpt=false }}
+        {{/foreach}}
+      {{/if}}
+    {{/get}}
+  </div>
+</div>

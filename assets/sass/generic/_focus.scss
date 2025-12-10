@@ -1,0 +1,7 @@
+// ------------------------------------
+// Generic > Focus
+// ------------------------------------
+
+:is(a, button, input, textarea, summary):focus-visible {
+  @include focus-outline();
+}
