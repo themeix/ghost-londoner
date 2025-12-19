@@ -1,9 +1,9 @@
 {
-  "name": "millmedialondoner",
+  "name": "millmedialondoner-r2",
   "description": "MillMedia custom Tripoli for The Londoner rev2",
   "demo": "https://tripoli.aspirethemes.com/",
   "docs": "https://aspirethemes.com/docs/tripoli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "engines": {
     "ghost": ">=5.0.0"
   },
