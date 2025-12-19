@@ -9,7 +9,7 @@
   },
   "keywords": [
     "ghost-theme"
-  ], 
+  ],  
   "scripts": {
     "postinstall": "bower install",
     "build": "gulp build",
