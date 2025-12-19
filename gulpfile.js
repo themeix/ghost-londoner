@@ -33,17 +33,17 @@
   // inlineCSS
   gulp.task('inlinecss', function(done) {
     return gulp.src(['partials/css/style.hbs'])
-    .pipe(replace('@@compiled_css', fs.readFileSync('assets/css/style-min.css')))
+    .pipe(replace('@@compiled_css', fs.readFileSync('assets/css/style-min.css', 'utf8')))
     .pipe(gulp.dest('partials/css/dist'))
-    done();
+    .on('end', done);
   });
 
   // inlineCSS-RTL
   gulp.task('inlinecss-rtl', function(done) {
     return gulp.src(['partials/css/style-rtl.hbs'])
-    .pipe(replace('@@compiled_css_rtl', fs.readFileSync('assets/css/style-min-rtl.css')))
+    .pipe(replace('@@compiled_css_rtl', fs.readFileSync('assets/css/style-min-rtl.css', 'utf8')))
     .pipe(gulp.dest('partials/css/dist'))
-    done();
+    .on('end', done);
   });
 
   // JavaScript

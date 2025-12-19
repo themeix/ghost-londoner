@@ -11,7 +11,12 @@
     "ghost-theme"
   ],
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "build": "gulp build",
+    "build:css": "gulp build_css",
+    "build:js": "gulp js",
+    "watch": "gulp watch",
+    "zip": "gulp zip"
   },
   "dependencies": {
     "bower": "^1.8.14",
