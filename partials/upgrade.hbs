@@ -26,10 +26,10 @@
             <a class='c-btn u-block u-align-auto u-mt-16' data-portal="signup" href="/#/portal/signup/free" style="color:#ffffff;">Join the List </a>
           {{/has}}
             {{#has visibility="paid"}}
-          <a class='c-btn u-block u-align-auto u-mt-16' data-portal="signup" href="#/portal/signup" style="color:#ffffff;">Subscribe </a>
+          <a class='c-btn u-block u-align-auto u-mt-16' data-portal="signup" href="#/portal/signup" style="color:#ffffff;background-color:var(--color-background-button-hover)!important;">Subscribe </a>
           {{/has}}
           {{#has visibility="tiers"}}
-             <a class='c-btn u-block u-align-auto u-mt-16' data-portal="signup" href="#/portal/signup" style="color:#ffffff;">Subscribe </a>
+             <a class='c-btn u-block u-align-auto u-mt-16' data-portal="signup" href="#/portal/signup" style="color:#ffffff;background-color:var(--color-background-button-hover)!important;">Subscribe </a>
           {{/has}}
          
             <p class='u-mt-16 u-font-size-scale-1' {{#has visibility='members'}}  {{else}} style="color: white;"{{/has}}  >{{t 'Already have an account?'}} <a href='#/portal/signin' class='u-link' {{#has visibility='members'}}  {{else}} style="color: white;"{{/has}}>{{t 'Sign In'}}</a></p>
