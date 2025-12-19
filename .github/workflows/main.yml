@@ -10,7 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Install gulp-cli globally
+        run: npm install -g gulp-cli
         
       - name: Build theme
         run: npm run build
